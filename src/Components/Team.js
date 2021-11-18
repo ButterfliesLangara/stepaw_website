@@ -59,7 +59,7 @@ const Team = () => {
   let count = 1;
   // console.log(shuffledArray);
   return (
-    <div className="team-page-cont">
+    <div className="team-page-cont" id="team-section">
       <div className="max-width-cont">
         <div className="heading">
           <h3 role="heading">Team</h3>

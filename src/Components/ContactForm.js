@@ -34,7 +34,7 @@ const ContactForm = ({ input_number }) => {
   };
 
   return (
-    <div className="homepage-contact-form">
+    <div className="homepage-contact-form" id="contact-section">
       <div className="max-width-cont">
         <div className="heading">
           <h3 role="heading">Contact Us</h3>

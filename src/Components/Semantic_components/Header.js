@@ -1,15 +1,65 @@
+import Image from "../Image";
+import mobile_icon from "../../assets/mobile_icon.svg";
+import desktop_icon from "../../assets/desktop_icon.svg";
+import hamburger from "../../assets/hamburger.svg";
 const Header = () => {
-return(
+  return (
     <header>
-        <nav>
+      <nav>
+        <div className="desktop">
+          <div className="leftnav">
+            <a
+              href="#home"
+              onClick={() => {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+              }}
+            >
+              <Image src={desktop_icon} alt={`Stepaw logo`} />
+            </a>
+          </div>
+          <div className="rightnav">
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
+              <li>
+                <a href="#feature-section" className="featurelink">Features</a>
+              </li>
+              <li>
+                <a href="#team-section" className="teamlink">Teams</a>
+              </li>
+              <li>
+                <a href="#contact-section" className="contactlink">Contact us</a>
+              </li>
             </ul>
-        </nav>
+          </div>
+        </div>
+
+        <ul className="mobile">
+          <div className="leftnav">
+            <a href="#home" onClick={() => {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;}}><Image src={mobile_icon} alt={"Stepaw logo"} /></a>
+          </div>
+          <div className="rightnav">
+            <span onClick={()=>{
+const sidenav=document.querySelector(".sidenav");
+sidenav.classList.toggle("sidenav-active");
+            }}><Image src={hamburger} alt={"Hamburger menu"} /></span>
+          </div>
+          <div className="sidenav">
+            <ul>
+              <li className="close-btn" onClick={()=>{
+const sidenav=document.querySelector(".sidenav");
+sidenav.classList.toggle("sidenav-active");
+              }}><Image src={hamburger} alt="close button"/></li>
+              <li><a href="#feature-section">Features</a></li>
+              <li><a href="#team-section">Team</a></li>
+              <li><a href="#contact-section">Contact us</a></li>
+            </ul>
+          </div>
+        </ul>
+      </nav>
     </header>
-)
-}
+  );
+};
 
 export default Header;
