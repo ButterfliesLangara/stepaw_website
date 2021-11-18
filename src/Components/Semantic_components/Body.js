@@ -1,7 +1,8 @@
+import Content from "../Content";
 const Body = () => {
-  return (<main>
-      
-  </main>);
+  return (
+<Content/>
+  )
 };
 
 export default Body;
