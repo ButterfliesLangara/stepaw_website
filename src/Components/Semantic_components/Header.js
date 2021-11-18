@@ -8,19 +8,26 @@ const Header = () => {
       <nav>
         <div className="desktop">
           <div className="leftnav">
-        <a href="#" onClick={()=>{ document.body.scrollTop = 0; 
-  document.documentElement.scrollTop = 0;}}><Image src={desktop_icon} alt={`Stepaw logo`} /></a>
+            <a
+              href="#home"
+              onClick={() => {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+              }}
+            >
+              <Image src={desktop_icon} alt={`Stepaw logo`} />
+            </a>
           </div>
           <div className="rightnav">
             <ul>
               <li>
-                <a href="#feature-section">Features</a>
+                <a href="#feature-section" className="featurelink">Features</a>
               </li>
               <li>
-                <a href="#team-section">Teams</a>
+                <a href="#team-section" className="teamlink">Teams</a>
               </li>
               <li>
-                <a href="#contact-section">Contact us</a>
+                <a href="#contact-section" className="contactlink">Contact us</a>
               </li>
             </ul>
           </div>
@@ -28,10 +35,26 @@ const Header = () => {
 
         <ul className="mobile">
           <div className="leftnav">
-            <Image src={mobile_icon} alt={"Stepaw logo"} />
+            <a href="#home" onClick={() => {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;}}><Image src={mobile_icon} alt={"Stepaw logo"} /></a>
           </div>
           <div className="rightnav">
-            <Image src={hamburger} alt={"Hamburger menu"} />
+            <span onClick={()=>{
+const sidenav=document.querySelector(".sidenav");
+sidenav.classList.toggle("sidenav-active");
+            }}><Image src={hamburger} alt={"Hamburger menu"} /></span>
+          </div>
+          <div className="sidenav">
+            <ul>
+              <li className="close-btn" onClick={()=>{
+const sidenav=document.querySelector(".sidenav");
+sidenav.classList.toggle("sidenav-active");
+              }}><Image src={hamburger} alt="close button"/></li>
+              <li><a href="#feature-section">Features</a></li>
+              <li><a href="#team-section">Team</a></li>
+              <li><a href="#contact-section">Contact us</a></li>
+            </ul>
           </div>
         </ul>
       </nav>
