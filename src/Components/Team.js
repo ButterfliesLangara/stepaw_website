@@ -4,99 +4,130 @@ import maneeshProfilePicture from "../assets/teams/maneesh.png";
 import glenProfilePicture from "../assets/teams/glen.png";
 import miaProfilePicture from "../assets/teams/mia.png";
 import falguniProfilePicture from "../assets/teams/falguni.png";
+import linkedInIconBlack from "../assets/teams/linkedin-icon-black.png";
+let devArray = [], designArray = [];
 
-let shuffledArray = [];
-
-function teamArray() {
-  let array = [
+  devArray = [
     {
-      name: "Falguni",
+      name: "Falguni Lakdawala",
       src: falguniProfilePicture,
-      role: "Project Manager/Developer (Full Stack)",
+      role: "PM / Full Stack Developer",
       description:
         "As a software developer has 5 years of experience in developing and managing project implementation of MDM systems and credit rating software.",
       linkedInURL: "https://www.linkedin.com/in/falguni-lakdawala/",
-    },
+      url: "/falguni-lakdawala"
+    },   
     {
-      name: "Sinae",
-      src: sinaeProfilePicture,
-      role: "Design Lead (UX/UI)",
+      name: "Maneesh Thouti",
+      src: maneeshProfilePicture,
+      role: "Full Stack Developer",
       description:
-        "I have an international relations academic background. I performed the whole UX research to UI design of the project by tracking the weekly deliverables.",
-      linkedInURL: "https://www.linkedin.com/in/sinae-bak/",
+        "I’m specialized in building native android interfaces in kotlin/Java. I worked on the android and backend part for Stepaw.",
+      linkedInURL: "https://www.linkedin.com/in/maneesh43/",
+      url: "/maneesh43"
     },
     {
       name: "Glen Thomas",
       src: glenProfilePicture,
-      role: "Developer (Full Stack)",
+      role: "Full Stack Developer",
       description:
-        "I worked on the hardware part in this project with arduino and also did a little coding in android.",
+        "I worked on the hardware part for Stepaw with arduino and also did a little coding in android.",
       linkedInURL: "https://www.linkedin.com/in/glen-tk/",
+      url: "/glen-tk"
     },
-    {
-      name: "Mia",
-      src: miaProfilePicture,
-      role: "Designer (UX/UI)",
-      description:
-        "As a UX/UI designer, going through every UX process and converting the result to UI design is my responsibility.",
-      linkedInURL: "https://www.linkedin.com/in/chun-mei-lin/",
-    },
-    {
-      name: "Maneesh",
-      src: maneeshProfilePicture,
-      role: "Developer (Full Stack)",
-      description:
-        "I’m specialized in building native android interfaces in kotlin/Java. I worked on the android and backend part of the project.",
-      linkedInURL: "https://www.linkedin.com/in/maneesh43/",
-    },
+    
     ,
   ];
-  return array;
-}
+ 
+  designArray = [
+    {
+      name: "Sinae Bak",
+      src: sinaeProfilePicture,
+      role: "Design Lead / UX/UI Designer",
+      description:
+        "I designed branding for Stepaw based on UX research and created design systems.",
+      linkedInURL: "https://www.linkedin.com/in/sinae-bak/",
+      url: "/sinae-bak"
+    },
+    {
+      name: "Chun-Mei Lin",
+      src: miaProfilePicture,
+      role: "UI/UX Designer",
+      description:
+        "I went through every UX process and converted the result to UI design.",
+      linkedInURL: "https://www.linkedin.com/in/chun-mei-lin/",
+      url: "/chun-mei-lin"
+    },
+  ];
 
 const Team = () => {
-  shuffledArray = teamArray();
-  let count = 1;
-  // console.log(shuffledArray);
   return (
     <div className="team-page-cont" id="team-section">
       <div className="max-width-cont">
         <div className="heading">
           <h3 role="heading">Team</h3>
-        </div>
-        <div className="subheading">
+          <div className="subheading">
             Introductions for team members who built up for this amazing app, Stepaw!
         </div>
-        <div className="team-members-cont">
-          {shuffledArray.map((data, index) => {
+        </div>
+        
+        <div className="team-members-cont row1">
+          {devArray.map((data, index) => {
             console.log(data);
             return (
               <div className="member-cont" key={index + data.name}>
                 <div className="image-cont">
-                {
-                  index % 2 == 0 &&
-                  <img className="team-img odd" role="img" src={data.src} alt={`${data.name} picture`} />
-                }
-                { 
-                  index % 2 != 0 &&
-                  <img role="team-img" src={data.src} alt={`${data.name} picture`} />
-                }
-                  
-                  
+                  <img className="team-img" role="img" src={data.src} alt={`${data.name} picture`} />  
                 </div>
                 <div className="text-details-cont">
                   <div className="name">{data.name}</div>
                   <div className="role">{data.role}</div>
                   <div className="description">{data.description}</div>
-                  {/* <div className="linkedin-link">
-                    <a role="link" href={data.linkedInURL}>
-                      <img
-                        role="img"
-                        src={linkedInIconBlack}
-                        alt="linkedin for the profile"
-                      />
-                    </a>
-                  </div> */}
+                  <div className="linkedin-link">
+                    
+                      <a role="link" href={data.linkedInURL}>
+                        <img
+                          role="img"
+                          src={linkedInIconBlack}
+                          alt="linkedin for the profile"
+                        />
+                      </a>
+                    
+                      <p className="linkedinUrl">{data.url}</p>
+                    
+                  </div>
+                </div>
+              </div> 
+            );
+          })
+        }
+        </div>
+
+        <div className="team-members-cont row2">
+          {designArray.map((data, index) => {
+            console.log(data);
+            return (
+              <div className="member-cont" key={index + data.name}>
+                <div className="image-cont">
+                  <img className="team-img" role="img" src={data.src} alt={`${data.name} picture`} />  
+                </div>
+                <div className="text-details-cont">
+                  <div className="name">{data.name}</div>
+                  <div className="role">{data.role}</div>
+                  <div className="description">{data.description}</div>
+                  <div className="linkedin-link">
+                    
+                      <a role="link" href={data.linkedInURL}>
+                        <img
+                          role="img"
+                          src={linkedInIconBlack}
+                          alt="linkedin for the profile"
+                        />
+                      </a>
+                    
+                      <p className="linkedinUrl">{data.url}</p>
+                    
+                  </div>
                 </div>
               </div> 
             );

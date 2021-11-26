@@ -239,21 +239,21 @@ ul {
 // Footer Styles
 .max-width-cont {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .homepage-contact-form {
   // padding: 6rem 4rem 8rem 4rem;
-  background: #e5f0f8;
+  // background: #e5f0f8;
 
   @media screen and (max-width: 700px) {
     padding: 1rem;
   }
 
   @media screen and (min-width: 700px) {
-    background: url(assets/puppies.svg) no-repeat center center;
-    background-size: cover;
+    // background: url(assets/puppies.svg) no-repeat center center;
+    // background-size: cover;
   }
 
   > * {
@@ -269,11 +269,15 @@ ul {
   .heading {
     h3 {
       font-family: "Dosis", "Lato", serif;
-      font-size: 3rem;
-      letter-spacing: 0.03em;
+      font-size: 1.875rem;
+      font-weight: 600;
       color: #000000;
       text-align: center;
-      margin: 3rem auto 0.5rem auto;
+      margin: 3rem auto 1.875rem auto;
+
+      @media screen and (max-width: 700px) {
+        margin: 3rem auto 1.25rem auto;
+      }
     }
   }
 
@@ -287,11 +291,56 @@ ul {
     }
   }
 
+  .gplayContainer{
+    text-align: center;
+    .gplay{
+      background: url("../src/assets/gplay.png");
+      width: 280px;
+      height: 80px;
+      background-size: 280px 80px;
+      min-height: 70px;
+      border: none;
+      align-items: center;
+    }
+
+    @media screen and (max-width: 700px) {
+      display: none;
+    }
+
+  }
+
+  .contactUSContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 0 1rem;
+    margin-top: 2.5rem;
+
+    @media screen and (max-width: 700px) {
+      grid-template-columns: repeat(1, 1fr);
+      margin: 0;
+    } 
+
+    .contactUsImage{
+
+      @media screen and (max-width: 700px) {
+          display: none;
+      } 
+      img{
+        height: auto;
+        width: 100%;
+      }
+
+    }
+  }
+  
+
   .form {
     text-align: center;
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
+    margin-top: 2rem;
 
     @media screen and (max-width: 700px) {
       max-width: 100%;
@@ -299,7 +348,7 @@ ul {
     }
 
     form {
-      width: 60%;
+      width: 100%;
       margin: auto;
 
       @media screen and (max-width: 700px) {
@@ -308,21 +357,18 @@ ul {
 
       .input-group {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2.5rem;
-
-        @media screen and (max-width: 700px) {
-          grid-template-columns: repeat(1, 1fr);
-        }
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
 
         input,
         textarea, input:focus, textarea:focus {
-          padding: 1rem;
+          padding: 1.5rem;
           border-radius: 10px;
           border: none;
           font-family: "Roboto", sans-serif;
-          font-size: 1.125rem;
+          font-size: 1rem;
           color: #000000;
+          background-color: #E6EEF5;
         }
 
         input:nth-of-type(1) {
@@ -350,6 +396,7 @@ ul {
         box-sizing: border-box;
         border-radius: 50px;
         margin-top: 2rem;
+        min-width: 180px;
       }
     }
   }
@@ -358,10 +405,10 @@ ul {
     display: flex;
     flex-flow: column;
     align-items: center;
-    margin: 3rem auto;
+    margin: 3.2rem auto;
 
     @media screen and (min-width: 700px) {
-      margin-top: 7rem;
+      margin-top: 5rem;
     }
   }
 }
@@ -376,24 +423,30 @@ input:-webkit-autofill:focus {
 
 .team-page-cont {
   padding: 2rem;
+  padding-bottom: 4rem;
+  background-color: #F5FAFF;
 
   @media screen and (max-width: 700px) {
     padding: 1rem;
+    padding-bottom: 3rem;
   }
 
   > * {
     text-align: center;
     display: grid;
-    gap: 2rem;
+    gap: 3rem;
   }
 
   .heading {
     h3 {
       font-family: "Dosis", "Lato", serif;
-      font-size: 3rem;
+      font-size: 1.875rem;
       letter-spacing: 0.1em;
+      font-weight: 600;
       color: #000000;
-      font-weight: 400;
+      margin: 0;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
     }
   }
 
@@ -401,32 +454,51 @@ input:-webkit-autofill:focus {
     font-family: "Lato", sans-serif;
     color: #000000;
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 1.375rem;
     font-weight: 300;
     line-height: 1.4;
     text-align: center;
+    margin-bottom: 1rem;
   }
 
-  .team-members-cont {
+  .row1{
     display: grid;
     gap: 4rem;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     align-items: flex-start;
-
-    @media screen and (max-width: 1000px) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-    }
+    justify-content: center;
+    
+    margin: 0 auto;
 
     @media screen and (max-width: 700px) {
       grid-template-columns: repeat(1, 1fr);
       gap: 3rem;
     }
 
+  }
+
+  .row2{
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    align-items: flex-start;
+    justify-content: center;
+
+    @media screen and (max-width: 700px) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 3rem;
+    }
+  }
+
+
+  .team-members-cont {
+
     .member-cont {
       display: flex;
       gap: 1rem;
       flex-direction: column;
+      max-width: 330px;
 
       .image-cont {
         display: flex;
@@ -437,13 +509,9 @@ input:-webkit-autofill:focus {
         img {
           border-radius: 50%;
           max-width: 150px;
-          max-height: 150px;
-          box-shadow: 0px 0px 0px 5px #ffe65f;
+          max-height: 150px; 
         }
 
-        .odd {
-          box-shadow: 0px 0px 0px 5px #739ec7;
-        }
       }
 
       .text-details-cont {
@@ -453,25 +521,38 @@ input:-webkit-autofill:focus {
         .name {
           font-family: "Dosis", "Lato", serif;
           color: #000000;
-          font-size: 1.75rem;
+          font-size: 2.187rem;
+          margin-bottom: .625rem;
         }
 
         .role {
           font-family: "Lato", sans-serif;
           color: #000000;
-          font-size: 1.25rem;
+          font-size: 1.375rem;
           font-weight: 500;
+          margin-bottom: .625rem;
         }
 
         .description {
           font-family: "Lato", sans-serif;
           font-size: 1.125rem;
           font-weight: 300;
-          line-height: 1.4;
+          line-height: 1.4; 
         }
 
         .linkedin-link {
-          margin-top: 0.5rem;
+          display: flex;
+          grid-gap: 0.125rem;
+          gap: 0.125rem;
+          align-items: flex-end;
+          justify-content: center;
+        }
+
+        .linkedinUrl{
+          font-size: 1.125rem;
+          margin-bottom: .5rem;
+          padding-left: .5rem;
+          font-weight: 600;
         }
       }
     }

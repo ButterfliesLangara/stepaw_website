@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { sendForm, init } from "emailjs-com";
+import contactUsImage from "../assets/contactUs.png";
 init("user_h2IHQvqREp9V1FV4kbt5q");
 // import Modal from "../composable-components/Modal";
 
@@ -38,53 +39,62 @@ const ContactForm = ({ input_number }) => {
       <div className="max-width-cont">
         <div className="heading">
           <h3 role="heading">Contact Us</h3>
-        </div>
-        <div className="subheading">
-          <p>
-            Feel free to contact us any time.
-            <br />
-            We will get back to you as soon as we can!
-          </p>
-        </div>
-        <div className="form">
-          <form ref={ref} onSubmit={(e) => handleSubmit(e)}>
-            <div className="input-group">
-              {input_number.map((input, i) => (
-                <input
-                  name={input[1].name}
-                  key={input.toString + i}
-                  onChange={(e) => handleData(e)}
-                  title={input[1].title}
-                  placeholder={input[1].placeholder}
-                  required
-                  type={input[1].type}
-                  required
-                />
-              ))}
-              <textarea
-                name="feedback"
-                onChange={(e) => handleData(e)}
-                role="textbox"
-                aria-label="Enter your feedback"
-                placeholder="Share your feedback"
-                rows="5"
-                required
-              ></textarea>
-            </div>
-            <button
-              role="button"
-              aria-label="submit contact form"
-              title="submit"
-              type="submit"
-            >
-              Submit
-            </button>
-          </form>
-
-          <div className="copyright">
-            <span>Copyright© 2021 Stepaw All right reserved</span>
+          <div className="subheading">
+            <p>
+              Stepaw is always open to connect with you!
+            </p>
           </div>
         </div>
+        
+        <div className="gplayContainer">
+          <button className="gplay"></button>
+        </div>
+
+        <div className="contactUSContainer">
+          <div className="contactUsImage">
+            <img src={contactUsImage} alt="Image" />
+          </div>
+          <div className="form">
+            <form ref={ref} onSubmit={(e) => handleSubmit(e)}>
+              <div className="input-group">
+                {input_number.map((input, i) => (
+                  <input
+                    name={input[1].name}
+                    key={input.toString + i}
+                    onChange={(e) => handleData(e)}
+                    title={input[1].title}
+                    placeholder={input[1].placeholder}
+                    required
+                    type={input[1].type}
+                    required
+                  />
+                ))}
+                <textarea
+                  name="feedback"
+                  onChange={(e) => handleData(e)}
+                  role="textbox"
+                  aria-label="Enter your feedback"
+                  placeholder="Share your feedback"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button
+                role="button"
+                aria-label="submit contact form"
+                title="submit"
+                type="submit"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div className="copyright">
+              <span>Copyright© 2021 Stepaw All right reserved</span>
+        </div>
+        
         
       </div>
       {/* <Modal
