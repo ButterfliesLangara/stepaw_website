@@ -67,7 +67,7 @@ const Content = () => {
         <div className="feature1">
           <Image src={feature_image_1} alt={"Feature image"} />
           <span className="feature-number">1</span>
-         <h3>Registration with a beacon and detecting walk steps.</h3>
+         <h3>Beacon registration and detecting walk steps.</h3>
         </div>
         <div className="feature2">
           <Image src={feature_image_2} alt={"Feature image"} />
