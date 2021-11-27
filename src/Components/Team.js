@@ -35,8 +35,6 @@ let devArray = [], designArray = [];
       linkedInURL: "https://www.linkedin.com/in/glen-tk/",
       url: "/glen-tk"
     },
-    
-    ,
   ];
  
   designArray = [
