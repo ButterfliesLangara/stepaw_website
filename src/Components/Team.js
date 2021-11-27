@@ -49,7 +49,6 @@ function teamArray() {
         "I’m specialized in building native android interfaces in kotlin/Java. I worked on the android and backend part of the project.",
       linkedInURL: "https://www.linkedin.com/in/maneesh43/",
     },
-    ,
   ];
   return array;
 }
