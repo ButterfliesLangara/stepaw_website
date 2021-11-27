@@ -20,7 +20,7 @@ let devArray = [], designArray = [];
     {
       name: "Maneesh Thouti",
       src: maneeshProfilePicture,
-      role: "Full Stack Developer",
+      role: "Android Developer",
       description:
         "I’m specialized in building native android interfaces in kotlin/Java. I worked on the android and backend part for Stepaw.",
       linkedInURL: "https://www.linkedin.com/in/maneesh43/",
