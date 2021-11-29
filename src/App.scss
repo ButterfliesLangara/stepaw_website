@@ -131,11 +131,11 @@ ul {
         flex-flow: row nowrap;
         align-items: center;
         gap: 1rem;
-@supports not(not (gap:1rem)){
-li{
-margin: 0 1rem;
-}
-      }
+        @supports not(gap:1rem) {
+          li{
+            margin: 0 1rem;
+          }
+        }
     }
   }
 }
@@ -646,4 +646,4 @@ input:-webkit-autofill:focus {
   }
 }
 
-// swiper
+}
