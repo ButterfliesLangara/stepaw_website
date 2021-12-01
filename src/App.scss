@@ -18,7 +18,7 @@ img {
 }
 
 .sidenav-active {
-  width: 40% !important;
+  width: 50% !important;
 }
 .close-btn {
   img {
@@ -152,6 +152,12 @@ ul {
     height: auto;
     padding: 1rem;
     margin-bottom: 1rem;
+    .mobile-carousel{
+      margin: .5rem 0;
+      .awssld__container{
+        height: 250px;
+      }
+    }
     .desktop-carousel{
       display: none;
     }
@@ -165,6 +171,9 @@ ul {
     }
     .awssld__bullets{
       button{
+        background-color: #dfe9f8;
+      }
+      .awssld__bullets--active{
         background-color: $color_primary;
       }
     }
@@ -321,6 +330,9 @@ ul {
     padding-left: 4rem;
   }
     
+  .stepawvideo{
+    margin: 1.5rem 0;
+  }
   //
 }
 
