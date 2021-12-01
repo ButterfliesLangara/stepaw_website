@@ -89,6 +89,7 @@ const Content = () => {
       <section className="stepawvideo"> 
 <video width="100%" height="100%" autoPlay muted preload="metadata" controls >
   <source src={stepaw_video} type="video/mp4"></source>
+  <a href={stepaw_video} download>Download</a>
   </video>
       </section>
     </div>
