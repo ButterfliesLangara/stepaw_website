@@ -4,6 +4,7 @@ import feature_image_1 from "../assets/feature_image_1.svg";
 import feature_image_2 from "../assets/feature_image_2.svg";
 import feature_image_3 from "../assets/feature_image_3.svg";
 import CarouselSlide from "./CarouselSlide";
+import stepaw_video from "../assets/Stepaw_video.mp4";
 
 const Content = () => {
   window.addEventListener("hashchange", () => {
@@ -83,6 +84,12 @@ const Content = () => {
 
       <section className="carousel">
         <CarouselSlide />
+      </section>
+
+      <section className="stepawvideo"> 
+<video width="100%" height="100%" autoPlay muted preload="metadata" controls >
+  <source src={stepaw_video} type="video/mp4"></source>
+  </video>
       </section>
     </div>
   );
