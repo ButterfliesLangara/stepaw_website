@@ -39,7 +39,7 @@ c.addEventListener("click",closeNav);
           <div className="rightnav">
             <ul>
               <li>
-                <a href="#feature-section" className="featurelink">Features</a>
+                <a href="#feature-section" className="featurelink" >Features</a>
               </li>
               <li>
                 <a href="#team-section" className="teamlink">Teams</a>
@@ -63,9 +63,9 @@ c.addEventListener("click",closeNav);
           <div className="sidenav">
             <ul>
               <li className="close-btn"><Image src={closeButton} alt="close button"/></li>
-              <li><a href="#feature-section">Features</a></li>
-              <li><a href="#team-section">Team</a></li>
-              <li><a href="#contact-section">Contact us</a></li>
+              <li onClick={()=>closeNav()}><a href="#feature-section">Features</a></li>
+              <li onClick={()=>closeNav()}><a href="#team-section">Team</a></li>
+              <li onClick={()=>closeNav()}><a href="#contact-section">Contact us</a></li>
             </ul>
           </div>
         </ul>
