@@ -15,23 +15,35 @@ const Content = () => {
     switch (window.location.hash) {
       case "#feature-section":
         feature.style.color = color_primary;
+        feature.style.fontWeight = "bold";
         team.style.color = "black";
         contact.style.color = "black";
+        team.style.fontWeight = "normal";
+        contact.style.fontWeight = "normal";
         break;
       case "#contact-section":
         feature.style.color = "black";
         contact.style.color = color_primary;
         team.style.color = "black";
+        contact.style.fontWeight = "bold";
+        feature.style.fontWeight = "normal";
+        team.style.fontWeight = "normal";
         break;
       case "#team-section":
         feature.style.color = "black";
         contact.style.color = "black";
         team.style.color = color_primary;
+        team.style.fontWeight = "bold";
+        feature.style.fontWeight = "normal";
+        contact.style.fontWeight = "normal";
         break;
       default:
         team.style.color = "black";
         contact.style.color = "black";
         feature.style.color = "black";
+        team.style.fontWeight = "normal";
+        contact.style.fontWeight = "normal";
+        feature.style.fontWeight = "normal";
     }
   });
 

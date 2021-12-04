@@ -150,8 +150,21 @@ ul {
   .carousel{
     width: 85%;
     height: auto;
-    padding: 1rem;
-    margin-bottom: 1rem;
+    padding: 0 1rem;
+    margin-bottom: 135px;
+    .awssld__controls{
+      transform: translateX(-100%);
+    }
+    .awssld{
+      position: relative;
+    }
+    .awssld__bullets{
+      justify-content: end;
+      z-index: 12;
+      position: absolute;
+      bottom: 1rem;
+      right: 4rem;
+    }
     .mobile-carousel{
       margin: .5rem 0;
       .awssld__container{
@@ -193,6 +206,7 @@ ul {
     justify-content: space-around;
     gap: 1rem;
     flex-flow: column nowrap;
+    margin-bottom: 135px;
     @media screen and (min-width: 768px) {
       width: 100%;
       display: flex;
@@ -223,7 +237,7 @@ ul {
       display: flex;
       justify-content: center;
       img {
-        width: 60%;
+        width: 100%;
         height: auto;
       }
     }
@@ -254,7 +268,7 @@ ul {
 
   .features {
     justify-items: center;
-    padding-bottom: 1rem;
+    padding-bottom: 135px;
     .feature1,
     .feature2,
     .feature3 {
@@ -274,9 +288,10 @@ ul {
       
     }
     .feature-number {
-      font-size: 2rem;
-      width: 35px;
-      height: 35px;
+      font-size: 1.2rem;
+      width: 20px;
+      height: 20px;
+      margin: 1rem;
       background-color: $color_primary;
       justify-self: center;
       border-radius: 50%;
@@ -323,6 +338,16 @@ ul {
           place-items: center;
         }
       }
+      .feature1{
+        img{
+          justify-self:flex-start ;
+        }
+      }
+      .feature3{
+        img{
+          justify-self: end;
+        }
+      }
     }
   }
 
@@ -331,7 +356,7 @@ ul {
   }
     
   .stepawvideo{
-    margin: 1.5rem 0;
+   margin: 0 0 135px 0;
   }
   //
 }
