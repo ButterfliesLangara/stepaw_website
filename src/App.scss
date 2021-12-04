@@ -150,8 +150,8 @@ ul {
   .carousel{
     width: 85%;
     height: auto;
-    padding: 1rem;
-    margin-bottom: 1rem;
+    padding: 0 1rem;
+    margin-bottom: 135px;
     .awssld__controls{
       transform: translateX(-100%);
     }
@@ -237,7 +237,7 @@ ul {
       display: flex;
       justify-content: center;
       img {
-        width: 60%;
+        width: 100%;
         height: auto;
       }
     }
@@ -268,7 +268,7 @@ ul {
 
   .features {
     justify-items: center;
-    padding-bottom: 1rem;
+    padding-bottom: 135px;
     .feature1,
     .feature2,
     .feature3 {
@@ -338,6 +338,16 @@ ul {
           place-items: center;
         }
       }
+      .feature1{
+        img{
+          justify-self:flex-start ;
+        }
+      }
+      .feature3{
+        img{
+          justify-self: end;
+        }
+      }
     }
   }
 
@@ -346,7 +356,7 @@ ul {
   }
     
   .stepawvideo{
-    margin: 1.5rem 0;
+   margin: 0 0 135px 0;
   }
   //
 }
