@@ -163,7 +163,12 @@ ul {
       z-index: 12;
       position: absolute;
       bottom: 1rem;
-      right: 4rem;
+      right: 3.5rem;
+      &::before{
+        content:'Click next';
+       position: block;
+       margin-right: .5rem;
+      }
     }
     .mobile-carousel{
       margin: .5rem 0;
@@ -188,6 +193,7 @@ ul {
       }
       .awssld__bullets--active{
         background-color: $color_primary;
+        transform: scale(1);
       }
     }
     .awssld__controls__arrow-left::before, .awssld__controls__arrow-right::before,.awssld__controls__arrow-left::after, .awssld__controls__arrow-right::after{
@@ -304,6 +310,7 @@ ul {
       }
       p{
         text-align: center;
+        margin-bottom: 135px;
       }
     }
 
@@ -328,6 +335,7 @@ ul {
           grid-row: 3;
           align-self: center;
           padding: .5rem;
+          text-align: center;
         }
         span{
           grid-row: 2;
@@ -338,16 +346,7 @@ ul {
           place-items: center;
         }
       }
-      .feature1{
-        img{
-          justify-self:flex-start ;
-        }
-      }
-      .feature3{
-        img{
-          justify-self: end;
-        }
-      }
+   
     }
   }
 
