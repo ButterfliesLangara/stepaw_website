@@ -81,15 +81,17 @@ const Team = () => {
                   <div className="name">{data.name}</div>
                   <div className="role">{data.role}</div>
                   <div className="description">{data.description}</div>
-                  <a role="link" href={data.linkedInURL}>
-                    <div className="linkedin-link">
-                          <img
-                            role="img"
-                            src={linkedInIconBlack}
-                            alt="linkedin for the profile"/>
-                        <p className="linkedinUrl">{data.url}</p>    
-                    </div>
-                  </a>
+                  <div className="lURL">
+                    <a role="link" href={data.linkedInURL}>
+                      <div className="linkedin-link">      
+                        <img
+                          role="img"
+                          src={linkedInIconBlack}
+                          alt="linkedin for the profile"/>
+                        <p className="linkedinUrl">{data.url}</p>
+                      </div>
+                    </a>
+                  </div>
                 </div>
               </div> 
             );
@@ -109,15 +111,17 @@ const Team = () => {
                   <div className="name">{data.name}</div>
                   <div className="role">{data.role}</div>
                   <div className="description">{data.description}</div>
-                  <a role="link" href={data.linkedInURL}>
-                    <div className="linkedin-link">                     
-                          <img
-                            role="img"
-                            src={linkedInIconBlack}
-                            alt="linkedin for the profile"/>
+                  <div className="lURL">
+                    <a role="link" href={data.linkedInURL}>
+                      <div className="linkedin-link">      
+                        <img
+                          role="img"
+                          src={linkedInIconBlack}
+                          alt="linkedin for the profile"/>
                         <p className="linkedinUrl">{data.url}</p>
-                    </div>
-                  </a>
+                      </div>
+                    </a>
+                  </div>
                 </div>
               </div> 
             );
