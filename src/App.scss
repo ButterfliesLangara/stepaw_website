@@ -30,6 +30,7 @@ img {
 }
 a {
   text-decoration: none;
+  color: #000;
 }
 h1,
 h2,
@@ -640,6 +641,7 @@ input:-webkit-autofill:focus {
         .name {
           font-family: "Dosis", "Lato", serif;
           color: #000000;
+          font-weight: 500;
           font-size: 2.187rem;
           margin-bottom: 0.625rem;
         }
@@ -669,7 +671,7 @@ input:-webkit-autofill:focus {
 
         .linkedinUrl {
           font-size: 1.125rem;
-          margin-bottom: 0.5rem;
+          margin-bottom: -0.2rem;
           padding-left: 0.5rem;
           font-weight: 600;
         }
