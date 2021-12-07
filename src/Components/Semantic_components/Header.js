@@ -42,7 +42,7 @@ c.addEventListener("click",closeNav);
                 <a href="#feature-section" className="featurelink" >Features</a>
               </li>
               <li>
-                <a href="#team-section" className="teamlink">Teams</a>
+                <a href="#team-section" className="teamlink">Team</a>
               </li>
               <li>
                 <a href="#contact-section" className="contactlink">Contact us</a>
