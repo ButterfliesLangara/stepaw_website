@@ -1,8 +1,10 @@
 import { useState, useRef } from "react";
 import { sendForm, init } from "emailjs-com";
 import contactUsImage from "../assets/contactUs.png";
+import Modal from "./Modal";
+
 init("user_h2IHQvqREp9V1FV4kbt5q");
-// import Modal from "../composable-components/Modal";
+
 
 const ContactForm = ({ input_number }) => {
   const [data, setData] = useState({});
@@ -97,10 +99,10 @@ const ContactForm = ({ input_number }) => {
         
         
       </div>
-      {/* <Modal
+      <Modal
         id={"contact-form-success-modal"}
         message={"Thank you for the feedback!"}
-      /> */}
+      />
     </div>
   );
 };
