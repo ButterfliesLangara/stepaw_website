@@ -163,8 +163,12 @@ ul {
       justify-content: end;
       z-index: 12;
       position: absolute;
-      bottom: 1rem;
-      right: 3.5rem;
+      right: .1rem;
+@media screen and (min-width: 768px) {
+  position: absolute;
+  bottom: 1rem;
+  right: 3.5rem;
+}
       &::before{
         content:'Click next';
        position: block;
