@@ -32,10 +32,10 @@ const Content = () => {
         contact1.style.fontWeight = "normal";
         break;
       case "#contact-section":
-        feature.style.color = "black";
-        feature1.style.color = "black";
         contact.style.color = color_primary;
         contact1.style.color = color_primary;
+        feature.style.color = "black";
+        feature1.style.color = "black";
         team.style.color = "black";
         team1.style.color = "black";
         contact.style.fontWeight = "bold";
@@ -46,12 +46,12 @@ const Content = () => {
         team1.style.fontWeight = "normal";
         break;
       case "#team-section":
+        team.style.color = color_primary;
+        team1.style.color = color_primary;
         feature.style.color = "black";
         feature1.style.color = "black";
         contact.style.color = "black";
         contact1.style.color = "black";
-        team.style.color = color_primary;
-        team1.style.color = color_primary;
         team.style.fontWeight = "bold";
         team1.style.fontWeight = "bold";
         feature.style.fontWeight = "normal";
