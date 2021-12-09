@@ -50,7 +50,6 @@ span {
   border-radius: 32px;
   background: $color_primary;
   color: white;
-  padding: 0.5rem;
 }
 //
 // Header
@@ -244,6 +243,7 @@ ul {
         }
         .button {
           margin: 0;
+          padding: .8rem;
         }
       }
     }

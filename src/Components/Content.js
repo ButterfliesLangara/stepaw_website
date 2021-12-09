@@ -1,5 +1,5 @@
 import Image from "./Image";
-import dog_icon_1 from "../assets/dog_icon_1.svg";
+import dog_icon_1 from "../assets/dog_icon_11.svg";
 import feature_image_1 from "../assets/feature_image_1.svg";
 import feature_image_2 from "../assets/feature_image_2.svg";
 import feature_image_3 from "../assets/feature_image_3.svg";
