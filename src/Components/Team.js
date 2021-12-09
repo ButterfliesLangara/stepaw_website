@@ -31,7 +31,7 @@ let devArray = [], designArray = [];
       src: glenProfilePicture,
       role: "Full Stack Developer",
       description:
-        "I worked on the hardware part for Stepaw with arduino and was responsible for ,integrating with android and also helped in setting up the backend.",
+        "I worked on the hardware part for Stepaw with arduino, I took care of integrating BLE functionality in android and also helped in setting up the backend.",
       linkedInURL: "https://www.linkedin.com/in/glen-tk/",
       url: "/glen-tk"
     },
