@@ -18,7 +18,7 @@ img {
 }
 
 .sidenav-active {
-  width: 50% !important;
+  width: 100% !important;
 }
 .close-btn {
   img {
@@ -85,11 +85,11 @@ header {
     ul {
       display: flex;
       flex-flow: column nowrap;
-      align-items: flex-start;
+      align-items: center;
       justify-content: center;
-      li{
-        padding:.5rem;
-        a:hover{
+      li {
+        padding: 0.5rem;
+        a:hover {
           color: $color_primary;
         }
       }
@@ -146,67 +146,71 @@ ul {
   justify-content: center;
   padding: 1rem;
   max-width: 1000px;
-  margin:0 auto;
+  margin: 0 auto;
 
-  .carousel{
+  .carousel {
     width: 85%;
     height: auto;
     padding: 0 1rem;
     margin-bottom: 135px;
-    .awssld__controls{
+    .awssld__controls {
       transform: translateX(-100%);
     }
-    .awssld{
+    .awssld {
       position: relative;
     }
-    .awssld__bullets{
+    .awssld__bullets {
       justify-content: end;
       z-index: 12;
       position: absolute;
-      right: .1rem;
-@media screen and (min-width: 768px) {
-  position: absolute;
-  bottom: 1rem;
-  right: 3.5rem;
-}
-      &::before{
-        content:'Click next';
-       position: block;
-       margin-right: .5rem;
+      right: 0.1rem;
+      @media screen and (min-width: 768px) {
+        position: absolute;
+        bottom: 1rem;
+        right: 3.5rem;
+        &::before {
+          content: "Click next";
+          position: block;
+          margin-right: 0.5rem;
+        }
       }
+     
     }
-    .mobile-carousel{
-      margin: .5rem 0;
-      .awssld__container{
+    .mobile-carousel {
+      margin: 0.5rem 0;
+      .awssld__container {
         height: 250px;
       }
     }
-    .desktop-carousel{
+    .desktop-carousel {
       display: none;
     }
     @media screen and (min-width: 768px) {
-      .desktop-carousel{
+      .desktop-carousel {
         display: initial;
       }
-      .mobile-carousel{
+      .mobile-carousel {
         display: none;
       }
     }
-    .awssld__bullets{
-      button{
+    .awssld__bullets {
+      button {
         background-color: #dfe9f8;
       }
-      .awssld__bullets--active{
+      .awssld__bullets--active {
         background-color: $color_primary;
         transform: scale(1);
       }
     }
-    .awssld__controls__arrow-left::before, .awssld__controls__arrow-right::before,.awssld__controls__arrow-left::after, .awssld__controls__arrow-right::after{
+    .awssld__controls__arrow-left::before,
+    .awssld__controls__arrow-right::before,
+    .awssld__controls__arrow-left::after,
+    .awssld__controls__arrow-right::after {
       background-color: $color_primary;
     }
-    .awssld__content{
+    .awssld__content {
       background-color: #fff;
-      img{
+      img {
         object-fit: contain;
       }
     }
@@ -251,6 +255,9 @@ ul {
         width: 100%;
         height: auto;
       }
+      @media screen and (min-width:768px){
+        transform: translateX(15%);
+      }
     }
     .intro-section-2 {
       display: flex;
@@ -266,11 +273,11 @@ ul {
       }
       button {
         width: 100px;
+        padding: .6rem;
         margin-left: 0;
         @media screen and (min-width: 768px) {
           margin: 0 auto;
         }
-        
       }
     }
   }
@@ -280,23 +287,33 @@ ul {
   .features {
     justify-items: center;
     padding-bottom: 135px;
+    width: 100%;
+    h3{
+      display: flex;
+      flex-flow: column nowrap;
+      span{
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 1em !important;
+        font-weight: bold;
+      }
+    }
     .feature1,
     .feature2,
     .feature3 {
       display: grid;
       justify-items: center;
-      span{
+      span {
         grid-row: 2;
-        margin: .5rem;
-        padding: .5rem;
-        overflow:hidden;
+        margin: 0.5rem;
+        padding: 0.5rem;
+        overflow: hidden;
         display: grid;
         place-items: center;
       }
       @media screen and (min-width: 768px) {
         justify-self: center;
       }
-      
     }
     .feature-number {
       font-size: 1.2rem;
@@ -313,7 +330,7 @@ ul {
       h2 {
         text-align: center;
       }
-      p{
+      p {
         text-align: center;
         margin-bottom: 135px;
       }
@@ -332,35 +349,34 @@ ul {
       .feature1 {
         display: grid;
         grid-template-columns: 1fr;
-        img{
+        img {
           grid-row: 1;
           justify-self: center;
         }
-        h3{
+        h3 {
           grid-row: 3;
           align-self: center;
-          padding: .5rem;
+          padding: 0.5rem;
           text-align: center;
         }
-        span{
+        span {
           grid-row: 2;
-          margin: .5rem;
-          padding: .5rem;
-          overflow:hidden;
+          margin: 0.5rem;
+          padding: 0.5rem;
+          overflow: hidden;
           display: grid;
           place-items: center;
         }
       }
-   
     }
   }
 
   @media screen and (min-width: 768px) {
     padding-left: 4rem;
   }
-    
-  .stepawvideo{
-   margin: 0 0 135px 0;
+
+  .stepawvideo {
+    margin: 0 0 135px 0;
   }
   //
 }
@@ -680,7 +696,7 @@ input:-webkit-autofill:focus {
           font-weight: 600;
         }
 
-        .lURL{
+        .lURL {
           display: block;
           margin: auto;
         }

@@ -11,39 +11,67 @@ const Content = () => {
     const feature = document.querySelector(".featurelink");
     const team = document.querySelector(".teamlink");
     const contact = document.querySelector(".contactlink");
+    const feature1 = document.querySelector(".featurelinkmobile");
+    const team1 = document.querySelector(".teamlinkmobile");
+    const contact1 = document.querySelector(".contactlinkmobile");
+
     const color_primary = "#004e99";
     switch (window.location.hash) {
       case "#feature-section":
         feature.style.color = color_primary;
+        feature1.style.color = color_primary;
         feature.style.fontWeight = "bold";
+        feature1.style.fontWeight = "bold";
         team.style.color = "black";
+        team1.style.color = "black";
         contact.style.color = "black";
+        contact1.style.color = "black";
         team.style.fontWeight = "normal";
+        team1.style.fontWeight = "normal";
         contact.style.fontWeight = "normal";
+        contact1.style.fontWeight = "normal";
         break;
       case "#contact-section":
         feature.style.color = "black";
+        feature1.style.color = "black";
         contact.style.color = color_primary;
+        contact1.style.color = color_primary;
         team.style.color = "black";
+        team1.style.color = "black";
         contact.style.fontWeight = "bold";
+        contact1.style.fontWeight = "bold";
         feature.style.fontWeight = "normal";
+        feature1.style.fontWeight = "normal";
         team.style.fontWeight = "normal";
+        team1.style.fontWeight = "normal";
         break;
       case "#team-section":
         feature.style.color = "black";
+        feature1.style.color = "black";
         contact.style.color = "black";
+        contact1.style.color = "black";
         team.style.color = color_primary;
+        team1.style.color = color_primary;
         team.style.fontWeight = "bold";
+        team1.style.fontWeight = "bold";
         feature.style.fontWeight = "normal";
+        feature1.style.fontWeight = "normal";
         contact.style.fontWeight = "normal";
+        contact1.style.fontWeight = "normal";
         break;
       default:
         team.style.color = "black";
+        team1.style.color = "black";
         contact.style.color = "black";
+        contact1.style.color = "black";
         feature.style.color = "black";
+        feature1.style.color = "black";
         team.style.fontWeight = "normal";
+        team1.style.fontWeight = "normal";
         contact.style.fontWeight = "normal";
+        contact1.style.fontWeight = "normal";
         feature.style.fontWeight = "normal";
+        feature1.style.fontWeight = "normal";
     }
   });
 
@@ -80,17 +108,17 @@ const Content = () => {
         <div className="feature1">
           <Image src={feature_image_1} alt={"Feature image"} />
           <span className="feature-number">1</span>
-         <h3>Beacon registration and detecting walk steps.</h3>
+         <h3><span>Beacon registration </span> <span>and detecting walk steps.</span></h3>
         </div>
         <div className="feature2">
           <Image src={feature_image_2} alt={"Feature image"} />
           <span className="feature-number">2</span>
-          <h3>Records for dog steps with visual charts.</h3>
+          <h3><span>Records for dog steps</span><span> with visual charts.</span></h3>
         </div>
         <div className="feature3">
           <Image src={feature_image_3} alt={"Feature image"} />
           <span className="feature-number">3</span>
-         <h3>Exclusive reminders for dog schedules.</h3>
+         <h3><span>Exclusive reminders for</span><span> dog schedules.</span></h3>
         </div>
       </section>
 
