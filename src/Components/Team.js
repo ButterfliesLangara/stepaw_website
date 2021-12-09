@@ -65,7 +65,7 @@ const Team = () => {
         <div className="heading">
           <h3 role="heading">Team</h3>
           <div className="subheading">
-            Introductions for team members who built up for this amazing app, Stepaw!
+            Introductions for team members who built up this amazing app, Stepaw!
         </div>
         </div>
         
