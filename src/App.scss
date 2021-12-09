@@ -243,7 +243,6 @@ ul {
         }
         .button {
           margin: 0;
-          padding: .8rem;
         }
       }
     }
@@ -272,8 +271,9 @@ ul {
         text-align: left;
       }
       button {
-        width: 100px;
-        padding: .6rem;
+       width: 180px;
+       height: 45px;
+       padding: 0;
         margin-left: 0;
         @media screen and (min-width: 768px) {
           margin: 0 auto;
