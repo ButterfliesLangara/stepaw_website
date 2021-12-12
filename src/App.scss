@@ -244,6 +244,13 @@ ul {
         .button {
           margin: 0;
         }
+        button:nth-of-type(2) {
+          all: unset;
+          margin-top: 1rem;
+          margin-right: auto;
+          width: 180px;
+          height: 45px;
+        }
       }
     }
 

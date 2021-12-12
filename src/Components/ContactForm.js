@@ -49,7 +49,7 @@ const ContactForm = ({ input_number }) => {
         </div>
         
         <div className="gplayContainer">
-          <button className="gplay"></button>
+          <button className="gplay" onClick={()=>window.location.href="https://play.google.com/store/apps/details?id=com.butterflies.stepaw"}></button>
         </div>
 
         <div className="contactUSContainer">

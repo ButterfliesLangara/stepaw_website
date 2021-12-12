@@ -5,6 +5,7 @@ import feature_image_2 from "../assets/feature_image_2.svg";
 import feature_image_3 from "../assets/feature_image_3.svg";
 import CarouselSlide from "./CarouselSlide";
 import stepaw_video from "../assets/Stepaw_video.mp4";
+import gpay from "../assets/gplay.png";
 
 const Content = () => {
   window.addEventListener("hashchange", () => {
@@ -97,6 +98,7 @@ const Content = () => {
             </p>
           </div>
           <button className="button stepaw-button">Download</button>
+          <button className="button stepaw-button" onClick={()=>window.location.href="https://play.google.com/store/apps/details?id=com.butterflies.stepaw"}><Image src={gpay}/></button>
         </div>
       </section>
 
